@@ -62,6 +62,7 @@
 					<li class="nav-item"><a class="nav-link" href="contact.html">Berita</a></li>
 					<li class="nav-item"><a class="nav-link" href="contact.html">Gallery</a></li>
 					<li class="nav-item"><a class="nav-link" href="contact.html">About</a></li>
+					<li class="nav-item"><a class="nav-link" href="<?= base_url('auth')?>">Masuk</a></li>
 				</ul>
 			</div>
 		</div>

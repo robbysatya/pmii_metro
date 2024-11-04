@@ -23,17 +23,17 @@
 		<!-- /.login-logo -->
 		<div class="card card-outline card-primary">
 			<div class="card-header text-center">
-				<a href="../../index2.html" class="h1"><img src="<?= base_url('assets/'); ?>images/logo_pmii.png" width="100" alt="">
+				<a href="<?= base_url('auth')?>" class="h1"><img src="<?= base_url('assets/'); ?>images/logo_pmii.png" width="100" alt="">
 					<h4>PMII KOTA METRO</h4>
 				</a>
 				<h3 style="font-weight:bold;">Masuk</h3>
 			</div>
 			<div class="card-body">
 				<!-- <p class="login-box-msg">Sign in to start your session</p> -->
-
-				<form action="../../index3.html" method="post">
+				<?= $this->session->flashdata('message'); ?>
+				<form method="post" action="<?= base_url('auth')?>">
 					<div class="input-group mb-3">
-						<input type="email" class="form-control" placeholder="Email">
+						<input type="email" class="form-control" placeholder="Email" id="email" name="email">
 						<div class="input-group-append">
 							<div class="input-group-text">
 								<span class="fas fa-envelope"></span>
@@ -41,7 +41,7 @@
 						</div>
 					</div>
 					<div class="input-group mb-3">
-						<input type="password" class="form-control" placeholder="Password">
+						<input type="password" class="form-control" placeholder="Password" id="password" name="password">
 						<div class="input-group-append">
 							<div class="input-group-text">
 								<span class="fas fa-lock"></span>
@@ -56,14 +56,6 @@
 						<!-- /.col -->
 					</div>
 				</form>
-
-				<div class="social-auth-links text-center mt-2 mb-3">
-					<a href="#" class="btn btn-block btn-danger">
-						<i class="fab fa-google mr-2"></i> Masuk dengan Google
-					</a>
-				</div>
-				<!-- /.social-auth-links -->
-
 			</div>
 			<!-- /.card-body -->
 		</div>

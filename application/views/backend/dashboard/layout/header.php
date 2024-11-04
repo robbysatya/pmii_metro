@@ -5,8 +5,10 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="icon" href="<?= base_url('assets/'); ?>images/logo_pmii.png" type="image/x-icon">
-	<title>PMII Kota Metro | Dashboard</title>
+	<title>PMII Kota Metro | <?= $title?></title>
 
+	<!-- Bootstrap -->
+	<link rel="stylesheet" href="<?= base_url('assets/'); ?>plugins/bootstrap/css/bootstrap.min.css">
 	<!-- Google Font: Source Sans Pro -->
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
 	<!-- Font Awesome -->
@@ -21,12 +23,18 @@
 	<link rel="stylesheet" href="<?= base_url('assets/'); ?>plugins/jqvmap/jqvmap.min.css">
 	<!-- Theme style -->
 	<link rel="stylesheet" href="<?= base_url('assets/'); ?>dist/css/adminlte.min.css">
+	  <!-- DataTables -->
+	<link rel="stylesheet" href="<?= base_url('assets/'); ?>plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
+  	<link rel="stylesheet" href="<?= base_url('assets/'); ?>plugins/datatables-responsive/css/responsive.bootstrap4.min.css">
+  	<link rel="stylesheet" href="<?= base_url('assets/'); ?>plugins/datatables-buttons/css/buttons.bootstrap4.min.css">
 	<!-- overlayScrollbars -->
 	<link rel="stylesheet" href="<?= base_url('assets/'); ?>plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
 	<!-- Daterange picker -->
 	<link rel="stylesheet" href="<?= base_url('assets/'); ?>plugins/daterangepicker/daterangepicker.css">
 	<!-- summernote -->
 	<link rel="stylesheet" href="<?= base_url('assets/'); ?>plugins/summernote/summernote-bs4.min.css">
+	<!-- Select2 -->
+	<link rel="stylesheet" href="<?= base_url('node_modules/'); ?>/select2/dist/css/select2.min.css" rel="stylesheet">
 </head>
 
 <body class="hold-transition sidebar-mini layout-fixed">
@@ -42,12 +50,6 @@
 			<ul class="navbar-nav">
 				<li class="nav-item">
 					<a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
-				</li>
-				<li class="nav-item d-none d-sm-inline-block">
-					<a href="index3.html" class="nav-link">Home</a>
-				</li>
-				<li class="nav-item d-none d-sm-inline-block">
-					<a href="#" class="nav-link">Contact</a>
 				</li>
 			</ul>
 
@@ -75,64 +77,6 @@
 					</div>
 				</li>
 
-				<!-- Messages Dropdown Menu -->
-				<li class="nav-item dropdown">
-					<a class="nav-link" data-toggle="dropdown" href="#">
-						<i class="far fa-comments"></i>
-						<span class="badge badge-danger navbar-badge">3</span>
-					</a>
-					<div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
-						<a href="#" class="dropdown-item">
-							<!-- Message Start -->
-							<div class="media">
-								<img src="<?= base_url('assets/'); ?>dist/img/user1-128x128.jpg" alt="User Avatar" class="img-size-50 mr-3 img-circle">
-								<div class="media-body">
-									<h3 class="dropdown-item-title">
-										Brad Diesel
-										<span class="float-right text-sm text-danger"><i class="fas fa-star"></i></span>
-									</h3>
-									<p class="text-sm">Call me whenever you can...</p>
-									<p class="text-sm text-muted"><i class="far fa-clock mr-1"></i> 4 Hours Ago</p>
-								</div>
-							</div>
-							<!-- Message End -->
-						</a>
-						<div class="dropdown-divider"></div>
-						<a href="#" class="dropdown-item">
-							<!-- Message Start -->
-							<div class="media">
-								<img src="<?= base_url('assets/'); ?>dist/img/user8-128x128.jpg" alt="User Avatar" class="img-size-50 img-circle mr-3">
-								<div class="media-body">
-									<h3 class="dropdown-item-title">
-										John Pierce
-										<span class="float-right text-sm text-muted"><i class="fas fa-star"></i></span>
-									</h3>
-									<p class="text-sm">I got your message bro</p>
-									<p class="text-sm text-muted"><i class="far fa-clock mr-1"></i> 4 Hours Ago</p>
-								</div>
-							</div>
-							<!-- Message End -->
-						</a>
-						<div class="dropdown-divider"></div>
-						<a href="#" class="dropdown-item">
-							<!-- Message Start -->
-							<div class="media">
-								<img src="<?= base_url('assets/'); ?>dist/img/user3-128x128.jpg" alt="User Avatar" class="img-size-50 img-circle mr-3">
-								<div class="media-body">
-									<h3 class="dropdown-item-title">
-										Nora Silvester
-										<span class="float-right text-sm text-warning"><i class="fas fa-star"></i></span>
-									</h3>
-									<p class="text-sm">The subject goes here</p>
-									<p class="text-sm text-muted"><i class="far fa-clock mr-1"></i> 4 Hours Ago</p>
-								</div>
-							</div>
-							<!-- Message End -->
-						</a>
-						<div class="dropdown-divider"></div>
-						<a href="#" class="dropdown-item dropdown-footer">See All Messages</a>
-					</div>
-				</li>
 				<!-- Notifications Dropdown Menu -->
 				<li class="nav-item dropdown">
 					<a class="nav-link" data-toggle="dropdown" href="#">

@@ -55,7 +55,8 @@
 			<div class="row">
 				<div class="col-lg-12">
 					<div class="copyright">
-						&copy; Copyright <span class="text-color">Pergerakan Mahasiswa Islam Indonesia Kota Metro</span> Develop with ❤ by <a href="https://github.com/robbysatya" target="_blank">Robby Satya Wicaksana</a>
+						2024 &copy; Copyright <span class="text-color">Pergerakan Mahasiswa Islam Indonesia Kota Metro</span>
+						 <!-- Develop with ❤ by <a href="https://github.com/robbysatya" target="_blank">Robby Satya Wicaksana</a> -->
 					</div>
 				</div>
 			</div>
