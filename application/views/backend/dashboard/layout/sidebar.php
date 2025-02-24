@@ -14,7 +14,7 @@
   				<img src="<?= base_url('assets/'); ?>dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
   			</div>
   			<div class="info">
-  				<a href="#" class="d-block"><?= $username ?></a>
+  				<a href="#" class="d-block"><?= $userdata; ?></a>
   			</div>
   		</div>
 
@@ -44,7 +44,7 @@
   						</p>
   					</a>
   				</li>
-  				<li class="nav-header">Data Anggota</li>
+  				<li class="navbar navbar-dark bg-dark">Data Anggota</li>
   				<li class="nav-item">
   					<a href="<?= base_url('dashboard/anggota'); ?>" class="nav-link">
   						<i class="nav-icon fas fa-user"></i>
@@ -63,7 +63,7 @@
   					</a>
   				</li>
 
-				  <li class="nav-header">Data Berita</li>
+				<li class="navbar navbar-dark bg-dark">Data Berita</li>
   				<li class="nav-item">
   					<a href="<?= base_url('dashboard/berita'); ?>" class="nav-link">
   						<i class="nav-icon fas fa-newspaper"></i>
@@ -72,8 +72,26 @@
   						</p>
   					</a>
   				</li>
+  				<li class="nav-item">
+  					<a href="<?= base_url('dashboard/kategori'); ?>" class="nav-link">
+  						<i class="nav-icon fas fa-list"></i>
+  						<p>
+  							Kategori
+  						</p>
+  					</a>
+  				</li>
+				
+				<li class="navbar navbar-dark bg-dark">Gallery Kegiatan</li>
+  				<li class="nav-item">
+  					<a href="<?= base_url('dashboard/gallery'); ?>" class="nav-link">
+					  	<i class="fas fa-images"></i>
+  						<p>
+  							Gallery kegiatan
+  						</p>
+  					</a>
+  				</li>
 
-				  <li class="nav-header">Data Akun</li>
+				<li class="navbar navbar-dark bg-dark"><span>Data Akun</span></li>
   				<li class="nav-item">
   					<a href="#" class="nav-link">
   						<i class="nav-icon fas fa-user"></i>

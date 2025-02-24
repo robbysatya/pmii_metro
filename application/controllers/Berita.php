@@ -6,22 +6,25 @@ class Berita extends CI_Controller
 	public function __construct()
 	{
 		parent::__construct();
+		$this->load->model('berita_model');
 	}
 
 	public function index()
 	{
-		$data['data_berita'] = $this->db->get('tb_berita')->result_array();
-	}
-	
-	public function tambah_berita()
-	{
-		$data['title'] = 'Tambah Berita';
-		$data['data_berita'] = $this->db->get('tb_berita')->result_array();
-		$this->load->view('backend/dashboard/layout/header', $data);
-		$this->load->view('backend/dashboard/layout/sidebar', $data);
-		$this->load->view('backend/dashboard/tambah_berita', $data);
-		$this->load->view('backend/dashboard/layout/footer');
+		$data['title'] = 'Berita';
+		$this->load->view('frontend/layout/header', $data);
+		$this->load->view('frontend/berita');
+		$this->load->view('frontend/layout/footer');
+	}	
+
+	public function getBerita($id_berita){
+		$data = $this->berita_model->getBeritabyID($id_berita);
+		$url_title =  $data['tb_berita'][0]->judul_berita;
+		$url_slug = url_title($url_title, 'dash', TRUE);
+		redirect(base_url('berita/'.$id_berita.'/'.$url_slug));
 	}
 
-	
+	public function detail_berita($id_berita){
+		echo $id_berita;
+	}
 }

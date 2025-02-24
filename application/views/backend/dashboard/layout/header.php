@@ -7,8 +7,12 @@
 	<link rel="icon" href="<?= base_url('assets/'); ?>images/logo_pmii.png" type="image/x-icon">
 	<title>PMII Kota Metro | <?= $title?></title>
 
+	<!-- CSS -->
+	<link rel="stylesheet" href="<?= base_url('assets/'); ?>css/backend/dashboard/style.css">
 	<!-- Bootstrap -->
 	<link rel="stylesheet" href="<?= base_url('assets/'); ?>plugins/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" href="<?= base_url('assets/'); ?>plugins/bootstrap-fileinput/css/fileinput.min.css">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 	<!-- Google Font: Source Sans Pro -->
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
 	<!-- Font Awesome -->
@@ -35,6 +39,12 @@
 	<link rel="stylesheet" href="<?= base_url('assets/'); ?>plugins/summernote/summernote-bs4.min.css">
 	<!-- Select2 -->
 	<link rel="stylesheet" href="<?= base_url('node_modules/'); ?>/select2/dist/css/select2.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="<?= base_url('node_modules/'); ?>/select2-bootstrap-5-theme/dist/select2-bootstrap-5-theme.css" rel="stylesheet">
+	<!-- tinymce -->
+	<script src="<?= base_url('vendor/'); ?>tinymce/tinymce/tinymce.min.js"></script>
+	<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/tinymce/7.5.0/tinymce.min.js"></script> -->
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/tinymce/7.5.0/jquery.tinymce.min.js"></script>
 </head>
 
 <body class="hold-transition sidebar-mini layout-fixed">

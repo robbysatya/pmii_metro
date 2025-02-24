@@ -6,6 +6,13 @@ class Data_Anggota extends CI_Controller
 	public function __construct()
 	{
 	  parent::__construct();
+
+	  if (!$this->session->userdata('email')) {
+		redirect('auth');
+	  } else if ($this->session->userdata('role_id') == null) {
+		redirect('auth');
+	  }
+
 	  $this->load->model('anggota_model');
 	  $this->load->library('form_validation');
 	}

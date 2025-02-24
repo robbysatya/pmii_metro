@@ -9,7 +9,7 @@
 	<!-- theme meta -->
 	<!-- <meta name="theme-name" content="orbitor" /> -->
 
-	<title>PMII | Pergerakan Mahasiswa Islam Indonesia Kota Metro</title>
+	<title>PMII Kota Metro | <?= $title?></title>
 
 	<!-- Favicon -->
 	<link rel="shortcut icon" type="image/x-icon" href="<?= base_url('assets/'); ?>images/logo_pmii.png" />
@@ -47,8 +47,8 @@
 
 			<div class="collapse navbar-collapse text-center" id="navbarsExample09">
 				<ul class="navbar-nav ml-auto">
-					<li class="nav-item active">
-						<a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+					<li class="nav-item">
+						<a class="nav-link" href="<?= base_url()?>">Home <span class="sr-only">(current)</span></a>
 					</li>
 
 					<li class="nav-item dropdown">
@@ -59,10 +59,10 @@
 							<li><a class="dropdown-item" href="blog-single.html">Alumni</a></li>
 						</ul>
 					</li>
-					<li class="nav-item"><a class="nav-link" href="contact.html">Berita</a></li>
+					<li class="nav-item"><a class="nav-link" href="<?= base_url('berita')?>">Berita</a></li>
 					<li class="nav-item"><a class="nav-link" href="contact.html">Gallery</a></li>
 					<li class="nav-item"><a class="nav-link" href="contact.html">About</a></li>
-					<li class="nav-item"><a class="nav-link" href="<?= base_url('auth')?>">Masuk</a></li>
+					<li class="nav-item ml-4"><a href="<?= base_url('auth')?>" class="btn btn-solid-border d-none d-lg-block">Masuk <i class="fa fa-angle-right ml-2"></i></a></li>
 				</ul>
 			</div>
 		</div>

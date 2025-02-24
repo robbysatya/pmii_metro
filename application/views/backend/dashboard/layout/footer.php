@@ -95,12 +95,12 @@
 		$(function () {
 			$("#example1").DataTable({
 				"responsive": true, "lengthChange": false, "autoWidth": false,
-				"buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"]
+				"buttons": ["excel", "pdf", "print"]
 			}).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
 			$('#example2').DataTable({
 				"paging": true,
 				"lengthChange": false,
-				"searching": false,
+				"searching": true,
 				"ordering": true,
 				"info": true,
 				"autoWidth": false,
@@ -120,9 +120,48 @@
 	});
 
 	$(document).ready(function() {
-			$('.kategoriBerita').select2();
+			$('#kategoriBerita').select2({
+				theme: "bootstrap-5"
+			});
 	});
-</script>
+
+	$(document).ready(function () {
+		tinymce.init({
+  			selector: 'textarea#isiBerita',
+			height: 1000,
+			plugins: [
+			'advlist', 'autolink', 'link', 'image', 'lists', 'charmap', 'preview', 'anchor', 'pagebreak',
+			'searchreplace', 'wordcount', 'visualblocks', 'visualchars', 'code', 'fullscreen', 'insertdatetime',
+			'media', 'table', 'emoticons', 'help'
+			],
+			toolbar: 'undo redo | styles | bold italic | alignleft aligncenter alignright alignjustify | ' +
+			'bullist numlist outdent indent | link image | print preview media fullscreen | ' +
+			'forecolor backcolor emoticons | help',
+			menu: {
+			favs: { title: 'My Favorites', items: 'code visualaid | searchreplace | emoticons' }
+			},
+			menubar: 'favs file edit view insert format tools table help',
+			content_css: 'css/content.css',
+			promotion: false,
+		});
+	});
+
+	function readURL(input) {
+    if (input.files && input.files[0]) {
+        var reader = new FileReader();
+				reader.onload = function (e) {
+					$('#preview_img').attr('src', e.target.result);
+					document.getElementById("preview_img").height = "100";
+				}
+
+				reader.readAsDataURL(input.files[0]);
+			}
+		}
+
+		$("#img_berita").change(function(){
+			readURL(this);
+		});
+	</script>
   </body>
 
   </html>
