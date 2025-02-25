@@ -5,7 +5,7 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="icon" href="<?= base_url('assets/'); ?>images/logo_pmii.png" type="image/x-icon">
-	<title>PMII Kota Metro | <?= $title?></title>
+	<title>PMII Kota Metro | <?= $title ?></title>
 
 	<!-- CSS -->
 	<link rel="stylesheet" href="<?= base_url('assets/'); ?>css/backend/dashboard/style.css">
@@ -27,10 +27,10 @@
 	<link rel="stylesheet" href="<?= base_url('assets/'); ?>plugins/jqvmap/jqvmap.min.css">
 	<!-- Theme style -->
 	<link rel="stylesheet" href="<?= base_url('assets/'); ?>dist/css/adminlte.min.css">
-	  <!-- DataTables -->
+	<!-- DataTables -->
 	<link rel="stylesheet" href="<?= base_url('assets/'); ?>plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
-  	<link rel="stylesheet" href="<?= base_url('assets/'); ?>plugins/datatables-responsive/css/responsive.bootstrap4.min.css">
-  	<link rel="stylesheet" href="<?= base_url('assets/'); ?>plugins/datatables-buttons/css/buttons.bootstrap4.min.css">
+	<link rel="stylesheet" href="<?= base_url('assets/'); ?>plugins/datatables-responsive/css/responsive.bootstrap4.min.css">
+	<link rel="stylesheet" href="<?= base_url('assets/'); ?>plugins/datatables-buttons/css/buttons.bootstrap4.min.css">
 	<!-- overlayScrollbars -->
 	<link rel="stylesheet" href="<?= base_url('assets/'); ?>plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
 	<!-- Daterange picker -->
@@ -88,7 +88,7 @@
 				</li>
 
 				<!-- Notifications Dropdown Menu -->
-				<li class="nav-item dropdown">
+				<!-- <li class="nav-item dropdown">
 					<a class="nav-link" data-toggle="dropdown" href="#">
 						<i class="far fa-bell"></i>
 						<span class="badge badge-warning navbar-badge">15</span>
@@ -123,7 +123,7 @@
 					<a class="nav-link" data-widget="control-sidebar" data-controlsidebar-slide="true" href="#" role="button">
 						<i class="fas fa-th-large"></i>
 					</a>
-				</li>
+				</li> -->
 			</ul>
 		</nav>
 		<!-- /.navbar -->

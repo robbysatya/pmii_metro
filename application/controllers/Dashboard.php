@@ -6,19 +6,19 @@ class Dashboard extends CI_Controller
 	public function __construct()
 	{
 		parent::__construct();
-		
-		  if (!$this->session->userdata('email')) {
-			redirect('auth');
-		  } else if ($this->session->userdata('role_id') == null) {
-			redirect('auth');
-		  } else if ($this->session->userdata('role_id') != '1') {
-			redirect('auth/blocked');
-		  } 
 
-		$this->load->helper(array('url','html','form')); 
+		if (!$this->session->userdata('email')) {
+			redirect('auth');
+		} else if ($this->session->userdata('role_id') == null) {
+			redirect('auth');
+		} else if ($this->session->userdata('role_id') != '1') {
+			redirect('auth/blocked');
+		}
+
+		$this->load->helper(array('url', 'html', 'form'));
 
 		$this->load->model('berita_model');
-	  	$this->load->library('form_validation');
+		$this->load->library('form_validation');
 	}
 
 	public function index()
@@ -90,12 +90,13 @@ class Dashboard extends CI_Controller
 
 	public function simpan_berita()
 	{
-  		$this->berita_model->simpan();
+		$this->berita_model->simpan();
 		$this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">Data Berhasil Disimpan!</div>');
 		redirect('dashboard/berita');
 	}
-	
-	public function kategori(){
+
+	public function kategori()
+	{
 		$data['title'] = 'Daftar Kategori';
 		$data['data_kategori'] = $this->db->get('tb_kategori')->result_array();
 		$get_datases = $this->db->get_where('tb_user', ['email' => $_SESSION['email']])->result_array();
@@ -106,8 +107,10 @@ class Dashboard extends CI_Controller
 		$this->load->view('backend/dashboard/layout/footer');
 	}
 
-	public function gallery(){
+	public function gallery()
+	{
 		$data['title'] = 'Gallery Kegiatan';
+		$data['data_kegiatan'] = $this->db->get('tb_kegiatan')->result_array();
 		$get_datases = $this->db->get_where('tb_user', ['email' => $_SESSION['email']])->result_array();
 		$data['userdata'] = $get_datases['0']['name'];
 		$this->load->view('backend/dashboard/layout/header', $data);

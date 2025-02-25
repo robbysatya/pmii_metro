@@ -63,7 +63,7 @@
   					</a>
   				</li>
 
-				<li class="navbar navbar-dark bg-dark">Data Berita</li>
+  				<li class="navbar navbar-dark bg-dark">Data Berita</li>
   				<li class="nav-item">
   					<a href="<?= base_url('dashboard/berita'); ?>" class="nav-link">
   						<i class="nav-icon fas fa-newspaper"></i>
@@ -80,18 +80,18 @@
   						</p>
   					</a>
   				</li>
-				
-				<li class="navbar navbar-dark bg-dark">Gallery Kegiatan</li>
+
+  				<li class="navbar navbar-dark bg-dark">Gallery Kegiatan</li>
   				<li class="nav-item">
   					<a href="<?= base_url('dashboard/gallery'); ?>" class="nav-link">
-					  	<i class="fas fa-images"></i>
+  						<i class="fas fa-images"></i>
   						<p>
   							Gallery kegiatan
   						</p>
   					</a>
   				</li>
 
-				<li class="navbar navbar-dark bg-dark"><span>Data Akun</span></li>
+  				<li class="navbar navbar-dark bg-dark"><span>Data Akun</span></li>
   				<li class="nav-item">
   					<a href="#" class="nav-link">
   						<i class="nav-icon fas fa-user"></i>
@@ -101,9 +101,9 @@
   					</a>
   				</li>
 
-				  <li class="nav-item">
+  				<li class="nav-item">
   					<a href="<?= base_url('auth/logout'); ?>" class="nav-link">
-					  <i class="nav-icon fas fas fa-sign-out-alt"></i>
+  						<i class="nav-icon fas fas fa-sign-out-alt"></i>
   						<p>
   							Keluar
   						</p>

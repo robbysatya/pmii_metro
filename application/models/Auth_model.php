@@ -33,7 +33,7 @@ class Auth_model extends CI_Model
             'email' => $user['email'],
             'role_id' => $user['role_id']
           ];
-		  $this->session->set_userdata($data);
+          $this->session->set_userdata($data);
           if ($user['role_id'] == 1) {
             redirect('dashboard');
           } else {
@@ -42,12 +42,12 @@ class Auth_model extends CI_Model
         } else {
           $this->session->set_flashdata('message', '<div class="alert alert-danger" role="alert">Email atau Password salah!</div>');
           redirect('auth');
-    	}
-	} else {
-		$this->session->set_flashdata('message', '<div class="alert alert-danger" role="alert">Akun tidak aktif!</div>');
-    	redirect('auth');
-	}
-	} else {
+        }
+      } else {
+        $this->session->set_flashdata('message', '<div class="alert alert-danger" role="alert">Akun tidak aktif!</div>');
+        redirect('auth');
+      }
+    } else {
       $this->session->set_flashdata('message', '<div class="alert alert-danger" role="alert">Email tidak terdaftar!</div>');
       redirect('auth');
     }
